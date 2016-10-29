@@ -1,17 +1,18 @@
 module Main where
 
 import Graphics.Gnuplot.Simple
-import qualified Graphics.Gnuplot.Terminal.WXT as WXT
-import qualified Graphics.Gnuplot.Terminal.PostScript as PS
+-- import qualified Graphics.Gnuplot.Terminal.WXT as WXT
+-- import qualified Graphics.Gnuplot.Terminal.PostScript as PS
 
 
 ops :: [Attribute]
 -- ops = [(Custom "term" ["postscript", "eps", "enhanced", "color", "solid"])
---       ,(Custom "output" ["\"/home/ubuntu/temp.eps\""])
+--       ,(Custom "output" ["temp.eps"])
 --       ]
 -- ops = [(terminal $ WXT.persist WXT.cons)]
-ops = [(EPS "/home/ubuntu/temp.eps")
-      ]
+-- ops = [(EPS "temp.eps")]
+ops = [(PNG "temp.png")]
+
 
   
 main :: IO ()
